@@ -1,4 +1,4 @@
-import { json } from "react-router-dom";
+
 
 const Details = ({ detail }) => {
 

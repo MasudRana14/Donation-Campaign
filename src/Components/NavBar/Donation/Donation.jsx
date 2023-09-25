@@ -5,6 +5,7 @@ const Donation = () => {
 
     const [donation, setDonation] = useState([]);
     const [noData, setNoData]= useState(false)
+    const [seeAll, setSeeAll]= useState(false)
 
     useEffect(()=>{
         const donationsItem = JSON.parse(localStorage.getItem('donation'));
@@ -25,10 +26,22 @@ const Donation = () => {
 
             <div>
 
-                <div className="grid grid-cols-2 gap-5">
-                {donation.map(card=> <AddDonations show={card} key={card.id} card={card}></AddDonations>)}
-                </div>
+             
 
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                {
+                    seeAll ? donation.map(card=> <AddDonations show={card} key={card.id} card={card}></AddDonations>) 
+                    : 
+                    donation.slice(0,2).map(card=> <AddDonations show={card} key={card.id} card={card}></AddDonations>)
+                }
+                </div>
+                  
+               <div className="text-center mt-5">
+               {
+                donation.length > 2 && <button onClick={()=>setSeeAll(!seeAll)} className="bg-[#009444] px-7 py-3 rounded-lg  mx-auto text-white font-semibold text-base">{seeAll ? "See Less" : "See All"}</button>
+               }
+                </div>   
+               
             </div>
            }
 
