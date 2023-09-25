@@ -2,7 +2,7 @@
 const Donation = () => {
     return (
         <div>
-            Donation
+           This is donation page
         </div>
     );
 };

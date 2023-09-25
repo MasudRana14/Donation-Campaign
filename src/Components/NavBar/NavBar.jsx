@@ -8,7 +8,7 @@ const NavBar = () => {
             <div className="flex items-center justify-between">
 
                 <Logo></Logo>
-                <ul className="flex gap-8">
+                <ul className="flex gap-8 text-lg font-bold py-11">
                     <li>
                         <NavLink
                             to="/"
