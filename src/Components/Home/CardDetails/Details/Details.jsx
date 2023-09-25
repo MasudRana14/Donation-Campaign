@@ -1,7 +1,37 @@
+import { json } from "react-router-dom";
 
 const Details = ({ detail }) => {
 
     const { id, img, Category, Description, Price, Button_bg } = detail;
+
+
+    const handleDonations= ()=>{
+        const donationsadd = [];
+        const donationsItem = JSON.parse(localStorage.getItem('donation'));
+
+        if(!donationsItem){
+            donationsadd.push(detail)
+            localStorage.setItem('donation', JSON.stringify(donationsadd));
+            alert('addd')
+        }
+        else{
+
+            const sameDetails = donationsItem.find(detail=> detail.id == id);
+            if(!sameDetails){
+
+                donationsadd.push(...donationsItem,detail)
+                localStorage.setItem('donation', JSON.stringify(donationsadd));
+                alert('add2')
+            }
+            else{
+                alert('aleady add')
+            }
+
+
+        }
+    }
+
+
 
     return (
         <div>
@@ -14,7 +44,7 @@ const Details = ({ detail }) => {
                     </div>
 
                     <div className="bg-[#0b0b0b80] p-3 w-[600px] absolute top-[298px] ">
-                        <button style={{ backgroundColor: Button_bg }} className="text-white px-3 py-3 text-xl font-semibold">Donate $ {Price}</button>
+                        <button onClick={handleDonations} style={{ backgroundColor: Button_bg }} className="text-white px-3 py-3 text-xl font-semibold">Donate $ {Price}</button>
                     </div>
 
                     <div className="">
