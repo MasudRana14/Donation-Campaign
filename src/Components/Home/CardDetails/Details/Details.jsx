@@ -1,4 +1,4 @@
-
+import swal from 'sweetalert';
 
 const Details = ({ detail }) => {
 
@@ -12,7 +12,6 @@ const Details = ({ detail }) => {
         if(!donationsItem){
             donationsadd.push(detail)
             localStorage.setItem('donation', JSON.stringify(donationsadd));
-            alert('addd')
         }
         else{
 
@@ -21,10 +20,10 @@ const Details = ({ detail }) => {
 
                 donationsadd.push(...donationsItem,detail)
                 localStorage.setItem('donation', JSON.stringify(donationsadd));
-                alert('add2')
+                swal("Done!", " Donate Success Full..!", "success");
             }
             else{
-                alert('aleady add')
+                swal("Error!", "Already Donate..!", "error");
             }
 
 
