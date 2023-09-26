@@ -8,7 +8,7 @@ const Banner = () => {
             <div className="relative">
 
                 <div className="bg-white opacity-20">
-                    <img src="https://i.ibb.co/g4MwvnK/Rectangle-4281.png" alt="" className="w-full" />
+                    <img src="https://i.ibb.co/1fVkVtF/Rectangle-4281.png" alt="" className="w-full" />
                 </div>
 
                 <div className="absolute top-[40px] left-[40px] lg:top-[200px] md:left-[200px] lg:left-[650px] xl:left-[360px] text-center">

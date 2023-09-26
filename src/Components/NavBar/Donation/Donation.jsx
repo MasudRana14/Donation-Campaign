@@ -14,7 +14,7 @@ const Donation = () => {
             setDonation(donationsItem);
         }
         else{
-            setNoData('No Data Hear')
+            setNoData('There Are No Donations Data Found..!')
         }
 
     },[])
@@ -22,13 +22,13 @@ const Donation = () => {
     return (
         <div>
            {
-            noData? <p className="text-5xl h-[80vh] justify-center items-center flex ">{noData}</p> : 
+            noData? <p className="text-2xl font-medium h-[80vh] justify-center items-center flex ">{noData}</p> : 
 
             <div>
 
              
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-8">
                 {
                     seeAll ? donation.map(card=> <AddDonations show={card} key={card.id} card={card}></AddDonations>) 
                     : 

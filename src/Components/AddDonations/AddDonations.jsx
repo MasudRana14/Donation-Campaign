@@ -1,3 +1,6 @@
+import PropTypes from 'prop-types';
+
+
 
 const AddDonations = ({ card }) => {
 
@@ -10,7 +13,7 @@ const AddDonations = ({ card }) => {
 
                     <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 ">
 
-                        <img src={img} alt="" />
+                        <img className='w-[300px]' src={img} alt="" />
 
                         <div style={{backgroundColor: Card_bg }} className="flex flex-col justify-between p-4 w-full leading-normal">
 
@@ -29,5 +32,11 @@ const AddDonations = ({ card }) => {
         </div>
     );
 };
+
+
+AddDonations.propTypes = {
+card: PropTypes.object.isRequired,
+}
+
 
 export default AddDonations;

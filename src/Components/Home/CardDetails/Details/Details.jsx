@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import swal from 'sweetalert';
 
 const Details = ({ detail }) => {
@@ -12,6 +13,7 @@ const Details = ({ detail }) => {
         if(!donationsItem){
             donationsadd.push(detail)
             localStorage.setItem('donation', JSON.stringify(donationsadd));
+            swal("Done!", " Donate Success Full..!", "success");
         }
         else{
 
@@ -42,12 +44,12 @@ const Details = ({ detail }) => {
                         <img className="w-full " src={img} alt="" />
                     </div>
 
-                    <div className="bg-[#0b0b0b80] p-3 w-[600px] absolute top-[298px] ">
-                        <button onClick={handleDonations} style={{ backgroundColor: Button_bg }} className="text-white px-3 py-3 text-xl font-semibold">Donate $ {Price}</button>
+                    <div className="bg-[#0b0b0b80] p-3 w-[600px] absolute top-[325px] ">
+                        <button onClick={handleDonations} style={{ backgroundColor: Button_bg }} className="text-white px-3 py-3 text-xl font-semibold rounded-lg">Donate $ {Price}.00</button>
                     </div>
 
                     <div className="">
-                        <h5 className="mb-2 block  text-4xl font-bold mt-8 text-[#0B0B0B]">
+                        <h5 className="mb-2 block  text-4xl font-bold mt-8  text-[#0B0B0B]">
                             {Category}
                         </h5>
                         <p className="block font-normal text-base mt-3 mb-5">
@@ -60,5 +62,10 @@ const Details = ({ detail }) => {
         </div>
     );
 };
+
+
+Details.propTypes = {
+    detail: PropTypes.object.isRequired,
+}
 
 export default Details;
