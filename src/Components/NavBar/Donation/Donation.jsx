@@ -14,7 +14,7 @@ const Donation = () => {
             setDonation(donationsItem);
         }
         else{
-            setNoData('There Are No Donations Data Found..!')
+            setNoData('No Data Found..!')
         }
 
     },[])
@@ -32,13 +32,13 @@ const Donation = () => {
                 {
                     seeAll ? donation.map(card=> <AddDonations show={card} key={card.id} card={card}></AddDonations>) 
                     : 
-                    donation.slice(0,2).map(card=> <AddDonations show={card} key={card.id} card={card}></AddDonations>)
+                    donation.slice(0,4).map(card=> <AddDonations show={card} key={card.id} card={card}></AddDonations>)
                 }
                 </div>
                   
                <div className="text-center mt-5">
                {
-                donation.length > 2 && <button onClick={()=>setSeeAll(!seeAll)} className="bg-[#009444] px-7 py-3 rounded-lg  mx-auto text-white font-semibold text-base">{seeAll ? "See Less" : "See All"}</button>
+                donation.length > 4 && <button onClick={()=>setSeeAll(!seeAll)} className="bg-[#009444] px-7 py-3 rounded-lg  mx-auto text-white font-semibold text-base">{seeAll ? "See Less" : "See All"}</button>
                }
                 </div>   
                

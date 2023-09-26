@@ -1,8 +1,19 @@
-# React + Vite
+# Web Site Name👇👇
+Donation Website Services
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## project features Hear👇
 
-Currently, two official plugins are available:
+ 1. User Authentication:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    Implement user authentication with a secure login system using JWT tokens.
+    Users can create accounts, log in, and access protected resources.
+
+ 2. File Upload and Storage:
+
+    Allow users to upload files to the server and store them securely.
+    Users can upload images, documents, or other file types, and the system will manage storage.
+
+3. Real-time Chat:
+
+   Enable real-time chat functionality using WebSockets.
+   Users can initiate chat conversations with other users and exchange messages in real-time.
