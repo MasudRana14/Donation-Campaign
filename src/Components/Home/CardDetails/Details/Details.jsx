@@ -37,14 +37,14 @@ const Details = ({ detail }) => {
     return (
         <div>
             <div>
-                <div className=" relative max-w-7xl mx-auto md:w-[600px]  lg:w-[600px] flex-col bg-white bg-clip-border text-gray-700">
+                <div className=" relative max-w-7xl mx-auto md:w-[600px]  lg:w-[600px] flex-col bg-white bg-clip-border text-gray-700 lg:mt-5 md:mt-5 mt-7">
 
                     <div className="  overflow-hidden bg-blue-gray-500 bg-clip-border text-white shadow-md shadow-blue-gray-500/40">
 
                         <img className="w-full " src={img} alt="" />
                     </div>
 
-                    <div className="bg-[#0b0b0b80] p-3 lg:w-[600px] md:w-[600px] absolute top-[180px] lg:top-[325px] md:top-[325px] ">
+                    <div className="bg-[#0b0b0b80] p-2 lg:p-3 md:p3  lg:w-[600px] md:w-[600px] absolute top-[152px] lg:top-[325px] md:top-[325px] ">
                         <button onClick={handleDonations} style={{ backgroundColor: Button_bg }} className="text-white px-3 py-3 md:text-xl lg:text-xl font-semibold rounded-lg">Donate $ {Price}.00</button>
                     </div>
 

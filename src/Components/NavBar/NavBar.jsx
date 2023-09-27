@@ -8,7 +8,7 @@ const NavBar = () => {
             <div className="flex-col ml-8 md:ml-0  lg:flex-row md:flex-row md:flex lg:flex items-center  md:justify-between lg:justify-between mt-5">
 
                 <Logo></Logo>
-                <ul className=" flex gap-8 text-lg font-bold mt-8 ml-4 md:mt-0 md:ml-0">
+                <ul className=" flex gap-5 md:gap-8 lg:gap-8 text-lg font-bold mt-8 md:mt-0 md:ml-0">
                     <li>
                         <NavLink
                             to="/"
