@@ -2,7 +2,7 @@
 const Logo = () => {
     return (
         <div>
-            <div className="w-48">
+            <div className="lg:w-48 md:w-48">
                 <img src="https://i.ibb.co/VBqHSN4/Logo.png" alt="" />
             </div>
         </div>

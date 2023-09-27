@@ -31,6 +31,7 @@ const myCreateRoute = createBrowserRouter([
                 element:<CardDetails></CardDetails>,
                 loader: ()=> fetch("/donations.json")
             }
+           
         ]
     }
 ])
